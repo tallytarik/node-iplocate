@@ -44,7 +44,8 @@ describe('Main module',function() {
         .then(() => {
           // Ensure that request.get was called and the API key was added
           expect(requestStub.called).to.equal(true);
-          expect(requestStub.getCall(0).args[1]).to.deep.equal({
+          expect(requestStub.getCall(0).args[0]).to.deep.equal({
+            uri: "https://www.iplocate.io/api/lookup/1.2.3.4",
             json: true,
             headers: { "X-API-Key": 'abcdef' }
           });
@@ -76,7 +77,7 @@ describe('Main module',function() {
         .then((results) => {
           expect(results).to.not.be.null;
 
-          expect(results).to.have.property('ip', '2001:4860:4860::8888');
+          expect(results).to.have.property('ip', '2001:4860:4860:0000:0000:0000:0000:8888');
           expect(results).to.have.property('country', 'United States');
           expect(results).to.have.property('country_code', 'US');
           expect(results).to.have.property('continent', 'North America');

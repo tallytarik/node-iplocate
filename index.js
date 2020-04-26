@@ -26,7 +26,8 @@ module.exports = function iplocate(ip_address, options, callback) {
 
     let endpoint = API_ENDPOINT + ip_address;
 
-    return request.get(endpoint, {
+    return request.get({
+      uri: endpoint,
       json: true,
       headers: headers
     }).then(function(results) {

@@ -1,7 +1,7 @@
-# IPLocate
+# IPLocate for Node.js
 Find geolocation data from IP addresses (e.g. city, country, timezone) using the [IPLocate.io](https://www.iplocate.io) API.
 
-IPLocate.io provides 1,500 free requests per day. For higher plans, check out [the website](https://www.iplocate.io)
+IPLocate.io provides 1,000 free requests per day. For higher plans, check out [the website](https://www.iplocate.io)
 
 [![NPM Package Version][npm-package-version-badge]][npm-package-url]
 [![NPM Package License][npm-package-license-badge]][npm-package-license-url]

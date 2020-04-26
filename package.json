@@ -1,6 +1,6 @@
 {
   "name": "node-iplocate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Find geolocation data from IP addresses (e.g. city, country, timezone) using the IPLocate.io API",
   "main": "index.js",
   "scripts": {

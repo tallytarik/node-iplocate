@@ -41,4 +41,4 @@ module.exports = function iplocate(ip_address, options, callback) {
       return callback(error);
     });
   });
-} 
+}

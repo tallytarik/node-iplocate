@@ -1,6 +1,6 @@
 {
   "name": "node-iplocate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Find geolocation data from IP addresses (e.g. city, country, timezone) using the IPLocate.io API",
   "main": "index.js",
   "scripts": {
@@ -31,14 +31,15 @@
   "author": "Tally Tarik",
   "license": "MIT",
   "dependencies": {
+    "node-fetch": "^3.2.3",
     "request": "^2.88.2",
     "request-promise": "^4.2.2",
-    "validate-ip-node": "^1.0.6"
+    "validate-ip-node": "^1.0.8"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "coveralls": "^3.1.0",
-    "mocha": "^7.1.2",
+    "mocha": "^9.0.0",
     "nock": "^9.1.4",
     "nyc": "^15.0.1",
     "sinon": "^4.1.3",

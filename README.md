@@ -1,5 +1,9 @@
 # IPLocate for Node.js
 
+[![NPM Package Version][npm-package-version-badge]][npm-package-url]
+[![NPM Package License][npm-package-license-badge]][npm-package-license-url]
+[![NPM Package Downloads][npm-package-downloads-badge]][npm-package-url]
+
 Look up details about an IP address using the free [IPLocate.io](https://www.iplocate.io) API:
 
 * [IP geolocation data](https://www.iplocate.io/docs#data-base-data) (IP to city, IP to country, IP to region, postal code, latitude, and longitude)
@@ -7,19 +11,9 @@ Look up details about an IP address using the free [IPLocate.io](https://www.ipl
 * [Privacy & threat data](https://www.iplocate.io/docs#data-privacy-data) (VPN detection, proxy detection, iCloud Private Relay detection, spam and abuser detection)
 * [Company data](https://www.iplocate.io/docs#data-company-data) (the name and domain of the business that uses the IP address)
 
-IPLocate.io provides 1,000 free requests per day with a [free account](https://iplocate.io/signup). For higher plans and access to more data, check out [the website](https://www.iplocate.io)
+See what information we can provide for [your IP address](https://www.iplocate.io/what-is-my-ip).
 
-[![NPM Package Version][npm-package-version-badge]][npm-package-url]
-[![NPM Package License][npm-package-license-badge]][npm-package-license-url]
-[![NPM Package Downloads][npm-package-downloads-badge]][npm-package-url]
-[![devDependencies Status][devDependencies-status-badge]][devDependencies-status-page-url]
-
-[![Node Version][node-version-badge]][node-downloads-page-url]
-[![Travis CI Build Status][travis-ci-build-status-badge]][travis-ci-build-status-page-url]
-[![Code Climate Status][code-climate-status-badge]][code-climate-status-page-url]
-[![Coverage Status](https://coveralls.io/repos/github/tallytarik/node-iplocate/badge.svg?branch=master&style=flat-square)](https://coveralls.io/github/tallytarik/node-iplocate?branch=master)
-
-[![NPM Package Statistics][npm-package-statistics-badge]][npm-package-url]
+IPLocate.io provides 1,000 free requests per day with a [free account](https://iplocate.io/signup). For higher plans and access to more data, check out [API pricing](https://www.iplocate.io/pricing).
 
 ## Installation
 

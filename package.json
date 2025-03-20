@@ -9,17 +9,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tallytarik/node-iplocate.git"
+    "url": "https://github.com/iplocate/node-iplocate.git"
   },
   "bugs": {
-    "url": "https://github.com/tallytarik/node-iplocate/issues"
+    "url": "https://github.com/iplocate/node-iplocate/issues"
   },
-  "homepage": "https://github.com/tallytarik/node-iplocate#readme",
+  "homepage": "https://github.com/iplocate/node-iplocate#readme",
   "keywords": [
     "geoip",
     "geolocate",
     "geolocation",
-    "ip",
+    "ip address",
+    "ip to country",
+    "ip to city",
+    "ip to region",
+    "ip vpn lookup",
+    "ip proxy lookup",
+    "ip to asn",
+    "ip to company",
     "maxmind",
     "city",
     "country",
@@ -28,7 +35,7 @@
     "ipv4",
     "ipv6"
   ],
-  "author": "Tally Tarik",
+  "author": "IPLocate.io",
   "license": "MIT",
   "dependencies": {
     "node-fetch": "^3.2.3",

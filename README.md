@@ -1,7 +1,13 @@
 # IPLocate for Node.js
-Find geolocation data from IP addresses (e.g. city, country, timezone) using the [IPLocate.io](https://www.iplocate.io) API.
 
-IPLocate.io provides 1,000 free requests per day. For higher plans, check out [the website](https://www.iplocate.io)
+Look up details about an IP address using the free [IPLocate.io](https://www.iplocate.io) API:
+
+* [IP geolocation data](https://www.iplocate.io/docs#data-base-data) (IP to city, IP to country, IP to region, postal code, latitude, and longitude)
+* [ASN details](https://www.iplocate.io/docs#data-asn-data) (ISP or network operator, associated domain name, and type, such as business, hosting, or company)
+* [Privacy & threat data](https://www.iplocate.io/docs#data-privacy-data) (VPN detection, proxy detection, iCloud Private Relay detection, spam and abuser detection)
+* [Company data](https://www.iplocate.io/docs#data-company-data) (the name and domain of the business that uses the IP address)
+
+IPLocate.io provides 1,000 free requests per day with a [free account](https://iplocate.io/signup). For higher plans and access to more data, check out [the website](https://www.iplocate.io)
 
 [![NPM Package Version][npm-package-version-badge]][npm-package-url]
 [![NPM Package License][npm-package-license-badge]][npm-package-license-url]
@@ -24,23 +30,17 @@ IPLocate.io provides 1,000 free requests per day. For higher plans, check out [t
 ```javascript
 const iplocate = require("node-iplocate");
 
-iplocate("8.8.8.8").then(function(results) {
+iplocate("123.243.246.200").then(function(results) {
   console.log("IP Address: " + results.ip);
   console.log("Country: " + results.country + " (" + results.country_code + ")");
   console.log("Continent: " + results.continent);
-  console.log("Organisation: " + results.org + " (" + results.asn + ")");
 
   console.log(JSON.stringify(results, null, 2));
 });
 
-// Or with callbacks
-iplocate("8.8.8.8", null, function(err, results) {
-  // ...
-  console.log(JSON.stringify(results, null, 2));
-});
-
-// Provide an API key from IPLocate.io
-iplocate("8.8.8.8", { api_key: "abcdef" }).then(function(results) {
+// Without an API key you can make 50 free requests per day.
+// With a free API key from IPLocate.io, you can make 1,000 requests per day.
+iplocate("123.243.246.200", { api_key: "abcdef" }).then(function(results) {
   // ...
 });
 ```
@@ -48,23 +48,57 @@ iplocate("8.8.8.8", { api_key: "abcdef" }).then(function(results) {
 ***
 
 ```javascript
-IP Address: 8.8.8.8
-Country: United States (US)
-Continent: North America
-Organisation: Google LLC (AS15169)
+IP Address: 123.243.246.200
+Country: Australia (AU)
+Continent: Australia
 
 {
-  "ip": "8.8.8.8",
-  "country": "United States",
-  "country_code": "US",
-  "city": null,
-  "continent": "North America",
-  "latitude": 37.751,
-  "longitude": -97.822,
-  "time_zone": null,
-  "postal_code": null,
-  "org": "Google LLC",
-  "asn": "AS15169"
+  "ip": "123.243.246.200",
+  "country": "Australia",
+  "country_code": "AU",
+  "is_eu": false,
+  "city": "Sydney",
+  "continent": "Oceania",
+  "latitude": -33.8672,
+  "longitude": 151.1997,
+  "time_zone": "Australia/Sydney",
+  "postal_code": "2049",
+  "subdivision": "New South Wales",
+  "subdivision2": null,
+  "network": "123.243.240.0/20",
+  "asn": {
+    "asn": "AS7545",
+    "route": "123.243.246.0/24",
+    "netname": "TPG-INTERNET-AP",
+    "name": "TPG Telecom Limited",
+    "country_code": "AU",
+    "domain": "tpgtelecom.com.au",
+    "type": "isp",
+    "rir": "APNIC"
+  },
+  "privacy": {
+    "is_abuser": false,
+    "is_anonymous": false,
+    "is_bogon": false,
+    "is_datacenter": false,
+    "is_icloud_relay": false,
+    "is_proxy": false,
+    "is_tor": false,
+    "is_vpn": false
+  },
+  "company": {
+    "name": "TPG Telecom",
+    "domain": "www.tpgtelecom.com.au",
+    "country_code": "AU",
+    "type": "isp"
+  },
+  "abuse": {
+    "address": "TPG Internet Pty Ltd., (Part of the Total Peripherals Group), 65 Waterloo Road, North Ryde NSW 2113",
+    "email": "hostmaster@tpgtelecom.com.au",
+    "name": "ABUSE TPGCOMAU",
+    "network": "123.243.246.192 - 123.243.246.223",
+    "phone": "+000000000"
+  }
 }
 ```
 
